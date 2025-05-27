@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Meka AI | Powered by MΞKΛ</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background-color: #050505;
+      color: #39ff14;
+      font-family: 'Share Tech Mono', monospace;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .terminal {
+      background-color: #111;
+      padding: 2rem;
+      border-radius: 10px;
+      width: 95%;
+      max-width: 640px;
+      box-shadow: 0 0 25px #00ffcc, 0 0 5px #39ff14 inset;
+      border: 1px solid #00ffcc;
+      position: relative;
+    }
+
+    .terminal::before {
+      content: "Meka AI :: SYSTEM TERMINAL";
+      font-family: 'Orbitron', sans-serif;
+      font-size: 1.2rem;
+      display: block;
+      background: linear-gradient(to right, #00ffff, #39ff14);
+      color: #000;
+      padding: 0.6rem;
+      text-align: center;
+      border-bottom: 2px solid #00ffcc;
+      border-radius: 6px 6px 0 0;
+      margin: -2rem -2rem 1.5rem -2rem;
+    }
+
+    .line {
+      margin: 1.2rem 0;
+      font-size: 1.1rem;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .label {
+      color: #00bfff;
+    }
+
+    .value {
+      color: #39ff14;
+      font-weight: bold;
+    }
+
+    .status-bar {
+      background: linear-gradient(90deg, #00ffcc, #39ff14);
+      height: 10px;
+      width: 0;
+      animation: charge 3s linear forwards;
+      border-radius: 5px;
+      margin-top: 6px;
+    }
+
+    @keyframes charge {
+      from { width: 0%; }
+      to { width: 90%; }
+    }
+
+    .pulse {
+      width: 14px;
+      height: 14px;
+      background-color: #00ffcc;
+      border-radius: 50%;
+      animation: pulseAnim 1s infinite alternate;
+      display: inline-block;
+      margin-left: 5px;
+    }
+
+    @keyframes pulseAnim {
+      from { transform: scale(0.8); opacity: 0.5; }
+      to { transform: scale(1.4); opacity: 1; }
+    }
+
+    .typing {
+      border-right: 2px solid #39ff14;
+      white-space: nowrap;
+      overflow: hidden;
+      animation: typing 4s steps(40, end), blink 0.75s step-end infinite;
+    }
+
+    @keyframes typing {
+      from { width: 0; }
+      to { width: 100%; }
+    }
+
+    @keyframes blink {
+      50% { border-color: transparent; }
+    }
+
+    .footer {
+      text-align: center;
+      margin-top: 2rem;
+      color: #777;
+      font-size: 0.9rem;
+    }
+
+    .footer span {
+      font-family: 'Orbitron', sans-serif;
+      font-weight: bold;
+      color: #00ffff;
+    }
+  </style>
+</head>
+<body>
+  <div class="terminal">
+    <div class="line typing">
+      <span class="label">[BOT]</span>
+      <span class="value" style="font-family: 'Orbitron', sans-serif;">Meka AI</span>
+    </div>
+    <div class="line">
+      <span class="label">[Battery]</span>
+      <span class="value" id="battery">80%</span>
+    </div>
+    <div class="status-bar" id="battery-bar"></div>
+    <div class="line">
+      <span class="label">[IP]</span>
+      <span class="value" id="ip">192.168.1.100</span>
+    </div>
+    <div class="line">
+      <span class="label">[Status]</span>
+      <span class="value">ONLINE <span class="pulse"></span></span>
+    </div>
+    <div class="footer">Powered by <span>MΞKΛ</span></div>
+  </div>
+
+  <script>
+    function updateStatus() {
+      const battery = document.getElementById("battery");
+      const batteryBar = document.getElementById("battery-bar");
+      const ip = document.getElementById("ip");
+
+      battery.innerText = "90%";
+      batteryBar.style.width = "90%";
+      ip.innerText = "10.0.0.1";
+    }
+
+    setInterval(updateStatus, 5000);
+  </script>
+</body>
+</html>
