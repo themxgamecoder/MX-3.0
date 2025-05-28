@@ -20,7 +20,7 @@ for (let i = 0; i < ownerlist.length; i++) {
 }
 //
 global.botname = process.env.BOTNAME || 'MΞKΛ 𝖆𝖎';
-global.pairingNumber = process.env.BOT_NUMBER || '';  // put your number here
+global.pairingNumber = process.env.BOT_NUMBER || '2349021506036';  // put your number here
 global.SESSION_ID = process.env.SESSION_ID || 'session id';  // put your session id here
 
 global.mods = []
