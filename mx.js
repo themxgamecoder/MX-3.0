@@ -36,7 +36,7 @@ import { format } from 'util'
 import yargs from 'yargs'
 import CloudDBAdapter from './mxgamecoder/cloudDBAdapter.js'
 import { mongoDB, mongoDBV2 } from './mxgamecoder/mongoDB.js'
-import { makeWASocket, protoType, serialize } from './lib/simple.js'
+import { makeWASocket, protoType, serialize } from './mxgamecoder/simple.js'
 
 const {
   DisconnectReason,
