@@ -44,7 +44,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 app.use(express.static(path.join(__dirname, 'msgamecoder')));
-app.use(express.static(path.join(__dirname, 'mek-media')));
+app.use(express.static(path.join(__dirname, 'meka-media')));
 app.get('/', (req, res) => {
   res.redirect('/mx.html');
 });
