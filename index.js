@@ -23,7 +23,7 @@ figlet(
 )
 
 figlet(
-  'Advanced Bot 🤔',
+  'AI',
   {
     horizontalLayout: 'default',
     verticalLayout: 'default',
@@ -44,7 +44,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 app.use(express.static(path.join(__dirname, 'msgamecoder')));
-
+app.use(express.static(path.join(__dirname, 'mek-media')));
 app.get('/', (req, res) => {
   res.redirect('/mx.html');
 });
