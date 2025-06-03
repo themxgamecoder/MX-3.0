@@ -1,5 +1,5 @@
 
-import { canLevelUp, xpRange } from '../lib/levelling.js'
+import { canLevelUp, xpRange } from '../mxgamecoder/levelling.js'
 let handler = async (m, { conn }) => {
 	let name = conn.getName(m.sender)
   let pp = await conn.profilePictureUrl(m.sender, 'image').catch(_ => 'https://i.ibb.co/1ZxrXKJ/avatar-contact.jpg')
